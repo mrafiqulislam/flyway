@@ -405,4 +405,8 @@ public abstract class Database<C extends Connection> implements Closeable {
      * @throws SQLException when the clean failed.
      */
     protected void doCleanPostSchemas(Schema[] schemas) throws SQLException { }
+
+    protected String getRawDeleteScript(Table table) {
+        return "DELETE FROM " + table + " WHERE " + quote("success") + " = " + getBooleanFalse();
+    }
 }

@@ -100,6 +100,9 @@ public class ConfigUtils {
     public static final String LOGGERS = "flyway.loggers";
     public static final String KERBEROS_CONFIG_FILE = "flyway.kerberosConfigFile";
 
+    // Clickhouse-specific
+    public static final String CLICKHOUSE_CLUSTER_NAME = "flyway.clickhouse.clusterName";
+
     // Oracle-specific
     public static final String ORACLE_SQLPLUS = "flyway.oracle.sqlplus";
     public static final String ORACLE_SQLPLUS_WARN = "flyway.oracle.sqlplusWarn";
@@ -330,6 +333,10 @@ public class ConfigUtils {
             return KERBEROS_CONFIG_FILE;
         }
 
+        // Clickhouse-specific
+        if ("FLYWAY_CLICKHOUSE_CLUSTER_NAME".equals(key)) {
+            return CLICKHOUSE_CLUSTER_NAME;
+        }
         // Oracle-specific
         if ("FLYWAY_ORACLE_SQLPLUS".equals(key)) {
             return ORACLE_SQLPLUS;

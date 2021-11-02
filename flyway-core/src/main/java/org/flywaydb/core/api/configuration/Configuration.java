@@ -376,6 +376,11 @@ public interface Configuration {
     boolean isBaselineOnMigrate();
 
     /**
+     * Cluster name for replicated ClickHouse DB
+     */
+    String getClickHouseClusterName();
+
+    /**
      * Whether Flyway should skip actually executing the contents of the migrations and only update the schema history table.
      * This should be used when you have applied a migration manually (via executing the sql yourself, or via an ide), and
      * just want the schema history table to reflect this.

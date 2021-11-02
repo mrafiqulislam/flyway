@@ -26,6 +26,7 @@
     <artifactId>flyway-core</artifactId>
     <packaging>jar</packaging>
     <name>${project.artifactId}</name>
+    <version>8.0.3-clickhouse</version>
     <dependencies>
         <!-- Optional loggers -->
         <dependency>

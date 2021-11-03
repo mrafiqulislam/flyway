@@ -267,7 +267,7 @@ class JdbcTableSchemaHistory extends SchemaHistory {
 
             clearCache();
             sqlScriptExecutorFactory
-                    .createSqlScriptExecutor(connection.getJdbcConnection())
+                    .createSqlScriptExecutor(connection.getJdbcConnection(), false, false, false)
                     .execute(database.getDeleteScript(sqlScriptFactory, table));
         } catch (SQLException e) {
             throw new FlywaySqlException("Unable to repair Schema History table " + table, e);
